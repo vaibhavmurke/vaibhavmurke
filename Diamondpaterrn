@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void Diamond(int n)
+{
+    for (int row = 1; row <= n; row++)
+    {
+        for (int col = 1; col <= (n - row); col++)
+        {
+            cout << " "; // Print spaces
+        }
+        for (int col = 1; col <= (2 * row - 1); col++)
+        {
+            cout << "*"; // Print stars
+        }
+        cout << endl;
+    }
+
+    // Bottom half of diamond
+    for (int row = 1; row <= n - 1; row++)
+    {
+        for (int col = 1; col <= row; col++)
+        {
+            cout << " "; // Print spaces
+        }
+        for (int col = 1; col <= (2 * (n - row) - 1); col++)
+        {
+            cout << "*"; // Print stars
+        }
+        cout << endl;
+    }
+}
+int main()
+{
+    Diamond(5);
+    return 0;
+}
