@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+class Solution
+{
+public:
+    void printHollowRectangle(int n, int m)
+    {
+        // Implement the pattern printing logic here
+        for (int row = 1; row <= n; row++)
+        {
+            if (row == 1 || row == n)
+            {
+                for (int col = 1; col <= m; col++)
+                {
+                    cout << "* ";
+                }
+            }
+            // cout<<endl;
+            else
+            {
+                cout << "* ";
+                for (int col = 1; col <= (m - 2); col++)
+                {
+                    cout << "  ";
+                }
+                cout << "* ";
+            }
+            cout << endl;
+        }
+    }
+};
+int main()
+{
+    Solution so;
+    so.printHollowRectangle(6, 5);
+    return 0;
+}
