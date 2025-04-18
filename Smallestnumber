@@ -1,0 +1,21 @@
+#include<iostream>
+#include<limits.h>
+using namespace std;
+
+int  print(int num){
+    int min=INT_MAX;
+    while(num!=0){
+    
+    int digit=num % 10;
+    if(digit<=min){
+        min=digit;
+    }    
+    num=num/10;
+}
+    cout<<min<<endl;
+}
+
+int main(){
+    print(2155);
+    return 0;
+}
