@@ -1,0 +1,35 @@
+e.g=num=321 then second num is 123 then it is palindrome number
+
+#include<iostream>
+using namespace std;
+
+int Reverse(int num)
+{   
+    int ans = 0;
+    while(num != 0) {
+        int digit = num % 10;
+        ans = ans * 10 + digit;
+        num = num / 10;
+    }
+    return ans;  
+}
+
+void Palidram(int num) {
+    int original = num;
+    int rev = Reverse(num);  
+    if(original == rev) {
+        cout << "The values are the same: The number is a palindrome." << endl;
+    } else {
+        cout << "The values are not the same: The number is not a palindrome." << endl;
+    }
+}
+
+int main() {
+    int num = 123;
+    cout << "Reverse of " << num << " is: " << Reverse(num) << endl;
+
+    Palidram(321);  
+    Palidram(123);  
+
+    return 0;
+}
